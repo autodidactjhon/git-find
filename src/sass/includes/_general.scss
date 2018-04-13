@@ -1,0 +1,32 @@
+// General
+
+html {
+	font-size: 16px;
+}
+
+body {
+	//font-family: 'Montserrat', sans-serif;
+	color: $text-color;
+	margin: 0;
+	position: relative;
+
+	&.home {
+		background-color: $body-bg;
+	}
+
+	&.search {
+		background-color: $light-color;		
+	}
+}
+
+p {
+	line-height: 25px;
+}
+
+ul {
+	margin: 0;
+
+	li {
+		list-style: none;
+	}
+} 

@@ -1,0 +1,34 @@
+// Variables
+
+$dark-color:												#000;
+$primary-color:                     #bf0816;
+$text-color:                        #444444;
+$light-color:                       #ffffff;
+$grey-color:                        #f8f8f8;
+$body-bg:   												#6ED3CF;
+$yellow:														#E2D616;
+$color-btn:													#02A3F8;				
+
+$card-repo-bg:											$body-bg;
+$card-favorito-bg:									#896BB9;
+
+$font-titles:                       'Montserrat', sans-serif;
+$font-size:													1rem;
+
+$widget-border-color:               #eeeeee;
+$widget-team-icon-size:             32px;
+$widget-team-active-icon-size:      36px;
+
+// Top menu
+$top-bg:														#E56A67;
+$top-menu-zindex: 									9000;
+
+//Responsive Variables
+$container-width: 									1020px;
+$desktop: 													"(max-width: 1199.98px)";
+$tablet: 														"(max-width: 991.98px)";
+$phone: 														"(max-width: 767.98px)";
+$small-phone: 											"(max-width: 575.98px)";
+
+//Non responsive devices
+$non-responsive: 										"(min-width: 768px;)";

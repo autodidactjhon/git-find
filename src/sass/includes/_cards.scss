@@ -1,0 +1,61 @@
+.cards {
+	flex: 0 1 65%;
+	border: solid 1px gray;
+	overflow-x: hidden;
+  overflow-y: scroll;
+
+	.card {
+		margin: 10px;
+		float: left;
+		width: calc(50% - 20px);
+		background-color: $card-repo-bg;
+		padding: 20px;
+    box-sizing: border-box;
+    position: relative;   
+
+		.card-title{
+			color: $light-color;
+			text-transform: uppercase;
+			text-align: right;
+			border-bottom: solid 1px $light-color;
+			padding-bottom: 10px;
+    	margin-bottom: 10px;
+		}
+
+		.card-description{
+			margin-bottom: 30px;
+		}
+
+		.card-starts{
+			margin-bottom: 10px;
+		}
+
+		.card-button{
+			padding: 10px;
+	    width: 110px;
+	    background-color: $dark-color;
+	    cursor: pointer;
+
+	    a {
+	    	text-decoration: none;
+	    	color: $color-btn;
+	    }
+		}
+
+		.card-favorita{
+			position: absolute;
+			right: 30px;
+    	bottom: 20px;
+    	height: 30px;
+    	width: 30px;
+    	border: solid 1px $light-color;
+    	cursor: pointer;
+
+    	&.active {
+    		border: solid 1px $yellow;
+    		background-color: $yellow;
+    	}
+		}
+
+	}
+}

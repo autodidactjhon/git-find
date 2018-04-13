@@ -1,0 +1,26 @@
+// Main wrapper
+
+.wrapper {
+	margin: 0 auto;
+	max-width: $container-width;
+	display: flex;
+	height: 100vh;
+
+	@media #{$desktop} {
+		max-width: 960px;
+	}
+
+	@media #{$phone} {
+		box-shadow: none;
+		background-color: $body-bg;
+	}
+
+	.box {
+		border: solid 1px gray;
+		padding: 20px;
+		width: 100%;
+		display: flex;
+		overflow: hideen;
+		scroller-y: scroller;
+	}
+}

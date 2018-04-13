@@ -1,0 +1,31 @@
+{
+  "name": "git-find",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e scss -x \"npm run dev\"",
+    "dev": "npm-run-all dev-*",
+    "dev-sass": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 \"src/sass/app.scss\" \"assets/css/git-find.css\"",
+    "dist": "npm-run-all dist-*",
+    "dist-sass": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 \"src/sass/app.scss\" \"assets/css/git-find.css\"",    
+    "dist-prefix": "postcss --use autoprefixer --replace \"assets/css/*.css\"",
+    "dist-minify": "cleancss --level 1 --output assets/css/git-find.min.css assets/css/git-find.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autodidactjhon/git-find.git"
+  },
+  "author": "@autodidactjhon",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.15.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^8.0.0",
+    "clean-css-cli": "^4.1.10",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0"
+  }
+}

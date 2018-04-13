@@ -1,0 +1,35 @@
+.login {
+	flex: 0 1 50%;
+	align-self: center;
+	margin-top: -120px;
+
+	.title-login{
+		display: block;
+    font-size: 80px;
+    text-align: right;
+    padding-right: 60px;
+    margin-bottom: 50px;
+	}
+
+	.input-text{
+		display: block;
+		padding: 16px;
+		width: 80%;
+		font-size: 1.308rem;
+		border: none;
+		float: right;
+		margin-bottom: 40px;
+	}
+
+	.btn{
+		display: block;
+		float: right;
+		background-color: $dark-color;
+		border: none;
+    color: lightblue;
+    padding: 17px 70px;
+    font-size: 1.154rem;
+    cursor: pointer;
+	}
+
+}
