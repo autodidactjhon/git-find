@@ -8,7 +8,7 @@
     "dev": "npm-run-all dev-*",
     "dev-sass": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 \"src/sass/app.scss\" \"assets/css/git-find.css\"",
     "dist": "npm-run-all dist-*",
-    "dist-sass": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 \"src/sass/app.scss\" \"assets/css/git-find.css\"",    
+    "dist-sass": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 \"src/sass/app.scss\" \"assets/css/git-find.css\"",
     "dist-prefix": "postcss --use autoprefixer --replace \"assets/css/*.css\"",
     "dist-minify": "cleancss --level 1 --output assets/css/git-find.min.css assets/css/git-find.css"
   },

@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  font-family: 'Proxima Nova', sans-serif;
   color: #444444;
   margin: 0;
   position: relative;
@@ -120,6 +121,7 @@ ul li {
 }
 
 .login .title-login {
+  font-family: 'Futura', sans-serif;
   display: block;
   font-size: 80px;
   text-align: right;
@@ -237,6 +239,16 @@ ul li {
 .favoritos .fav-card .fav-card-name-repo {
   text-transform: uppercase;
   color: #E2D616;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url("../../assets/fonts/Futura/Futura Book font.ttf");
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../../assets/fonts/ProximaNova/ProximaSansRegular Regular.ttf");
 }
 
 /*# sourceMappingURL=git-find.css.map */
