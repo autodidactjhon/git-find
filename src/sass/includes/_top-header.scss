@@ -30,6 +30,10 @@
     	.special {
 				color: $yellow;
     	}
+
+    	@media #{$phone}{
+				display: none;
+    	}
 		}
 
 		.search-container {
@@ -38,15 +42,20 @@
 		  overflow: hidden;
 		  display: flex;
 
+		 	@media #{$phone}{
+				width: 100%;
+    	} 
+
 			form {
 				flex: 0 1 100%;
 
 			  .input-search {
-					padding: 13px;
-			    font-size: 1.154rem;
+					padding: 14px;
+			    font-size: 1.077rem;
 			    border: none;
 			    box-shadow: 3px 4px 15px #4d4b4b;
 		  		width: 100%;
+		  		color: #5e5d5d;
 			  }
 			}
 

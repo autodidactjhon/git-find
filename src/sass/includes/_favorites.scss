@@ -1,0 +1,78 @@
+.favorites {
+	flex: 0 1 35%;
+	padding: 80px 20px 20px;
+	border-left: solid 2px $widget-border-color;
+  box-sizing: border-box;
+  position: relative;
+
+  @media #{$phone}{
+    flex: none;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  @media #{$phone}{
+    padding: 20px;
+  }
+
+  .favorite-title {
+  	color: $light-color;
+  	text-align: center;
+  	background-color: $dark-color;
+  	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 60px;
+    font-size: 1.231rem;
+
+    @media #{$phone}{
+      display: none;
+    }
+  }
+
+  .fav-message {
+  	color: gray;
+    text-align: center;
+    margin-top: 65%;
+
+    @media #{$phone}{
+      margin-top: 28%;
+    }
+  }
+
+	.fav-card{
+		padding: 20px;
+    background-color: $card-favorito-bg;
+    margin-bottom: 20px;
+    box-shadow: 3px 4px 15px #4d4b4b;
+		
+		.fav-card-name{
+			color: $light-color;
+
+			&:after {
+    		content: "";
+			  display: block;
+			  width: 100%;
+    		border-bottom: solid 2px $light-color;
+    		box-shadow: 3px 3px 8px #4d4b4b;
+    		margin: 10px 0 20px;
+    	}
+
+			.fav-user{
+				text-transform: uppercase;
+			}
+		}
+
+		.fav-card-name-repo{
+			text-transform: uppercase;
+			color: $yellow;
+			text-align: center;
+		}
+	}
+
+
+}

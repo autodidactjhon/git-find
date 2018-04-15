@@ -1,7 +1,7 @@
 // General
 
 html {
-	font-size: 16px;
+	font-size: 1rem;
 	height: 100%;
 }
 
@@ -11,6 +11,10 @@ body {
 	margin: 0;
 	position: relative;
 	height: 100%;
+
+	@media #{$phone}{
+		height: auto;
+	}
 
 	&.home {
 		background-color: $body-bg;

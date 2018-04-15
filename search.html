@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--Styles-->
 	<link rel="stylesheet" href="assets/css/git-find.css" type="text/css">
+	<link rel="stylesheet" href="assets/lib/perfect-scrollbar/perfect-scrollbar.css" type="text/css">
 </head>
 <body class="search">
 	<header class="top-header">
@@ -18,18 +19,74 @@
 		</div>
 	</header>
 	<div class="wrapper">
-		<div class="box">	
-			<section class="cards" id="cards">				
+		<div class="box">
+			<div class="tabs">
+				<div class="tab active" data-tab="cards" id="tabCards">REPOS</div>
+				<div class="tab" data-tab="favorites" id="tabFavorites">FAVORITOS</div>
+			</div>
+			<section class="cards content-tab active" id="cards">
+				<div class="card-message" id="cardMessage">
+					<span>Realice una busqueda.</span>
+				</div>
 			</section>
-			<section class="favoritos" id="favoritos">
+			<section class="favorites content-tab" id="favorites">
+				<div class="favorite-title">
+					<span>FAVORITOS</span>
+				</div>
+				<div class="fav-message" id="favMessage">
+					<span>No hay favoritos.</span>
+				</div>
 			</section>
 		</div>
 	</div>
 	<!--JS-->
+	<script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script>
-		const search = new SearchApp();
+		const search = new Search();
 		search.init();
+
+		let psCards, psFavorites;
+
+		if( window.innerWidth > 767.98 ){
+			psCards = new PerfectScrollbar(Search.CARDS, {
+				useBothWheelAxes: false,
+		    suppressScrollX: true
+			});
+
+			psFavorites = new PerfectScrollbar(Search.FAVORITES, {
+				useBothWheelAxes: false,
+		    suppressScrollX: true
+			});
+		}
+
+		window.addEventListener('resize', () => {
+			
+			if( window.innerWidth < 767.98 && typeof psCards == 'object' && typeof psFavorites == 'object' ){
+				psCards.destroy();
+				psFavorites.destroy();
+				psCards = undefined;
+				psFavorites = undefined;
+			}
+
+			if( window.innerWidth > 767.98 && typeof psCards == 'object' && typeof psFavorites == 'object' ){
+				psCards.update();
+				psFavorites.update();
+			}
+
+			if( window.innerWidth > 767.98 && typeof psCards != 'object' && typeof psFavorites != 'object' ){
+				psCards = new PerfectScrollbar(Search.CARDS, {
+					useBothWheelAxes: false,
+			    suppressScrollX: true
+				});
+
+				psFavorites = new PerfectScrollbar(Search.FAVORITES, {
+					useBothWheelAxes: false,
+			    suppressScrollX: true
+				});
+			}
+		});
+
 	</script>
 </body>
 </html>

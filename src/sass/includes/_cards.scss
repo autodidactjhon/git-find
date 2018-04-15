@@ -1,7 +1,26 @@
 .cards {
 	flex: 0 1 65%;
-	overflow-x: hidden;
-  overflow-y: scroll;
+  position: relative;
+  padding: 25px;
+
+  @media #{$phone}{
+  	flex: none;
+  	display: none;
+
+  	&.active {
+  		display: block;
+  	}
+  }
+
+  .card-message {
+  	color: gray;
+    text-align: center;
+    margin-top: 40%;
+
+    &.hiden {
+    	display: none;
+    }
+  }
 
 	.card {
 		margin: 10px;
@@ -10,41 +29,64 @@
 		background-color: $card-repo-bg;
 		padding: 20px;
     box-sizing: border-box;
-    position: relative;   
+    position: relative;
+    box-shadow: 3px 4px 15px #4d4b4b;
+    font-size: 0.9231rem;
+    color: $dark-color;
+
+    @media #{$small-phone} {
+	  	width: calc(100% - 20px);	
+	  }
 
 		.card-title{
 			color: $light-color;
 			text-transform: uppercase;
 			text-align: right;
-			border-bottom: solid 1px $light-color;
 			padding-bottom: 10px;
-    	margin-bottom: 10px;
+			font-size: 1.077rem;
+
+    	&:after {
+    		content: "";
+			  display: block;
+			  width: 100%;
+    		border-bottom: solid 2px $light-color;
+    		box-shadow: 3px 3px 8px #4d4b4b;
+    		margin-top: 10px;
+    	}
 		}
 
 		.card-description{
-			margin-bottom: 30px;
+			margin-bottom: 20px;
+			height: 35px;
+	    overflow: hidden;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
 		}
 
 		.card-starts{
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 
 		.card-button{
 			padding: 10px;
-	    width: 110px;
+	    width: auto;
 	    background-color: $dark-color;
 	    cursor: pointer;
+	    display: inline;
+	    box-shadow: 3px 4px 15px #4d4b4b;
 
 	    a {
 	    	text-decoration: none;
-	    	color: $color-btn;
+	    	color: $button-color;
+	    	font-weight: bold;
 	    }
 		}
 
 		.card-favorite-star{
 			position: absolute;
-			right: 30px;
-    	bottom: 20px;
+			right: 10px;
+    	bottom: 10px;
 
   		&:before {
     		content: '\f27c';

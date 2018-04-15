@@ -16,20 +16,27 @@
 	}
 
 	@media #{$phone} {
-		max-width: 767.98px;
-		display: block;
+		max-width: 767.98px;		
 		box-shadow: none;
 		background-color: $body-bg;
-		margin: 0 30px;
+
+		.home & {
+			display: block;
+		}
 	}
 
 	@media #{$small-phone} {
 		max-width: 100%;
 		padding: 0;
+		margin: 0 40px;
 	}
 
 	.search & {
 		height: calc(100% - 80px);
+
+		@media #{$phone} {
+			background-color: $light-color;
+		}
 	}
 
 	.box {
@@ -37,7 +44,32 @@
 		width: 100%;
 		display: flex;
 		box-shadow: 3px 4px 15px #4d4b4b;
-		//overflow: hideen;
-		//scroller-y: scroller;
+
+		@media #{$phone} {
+			display: block;
+		}
+
+		.tabs {
+			display: none;
+
+			@media #{$phone} {
+				display: flex;
+			}
+
+			.tab {
+				flex: 0 1 50%;
+				text-align: center;
+				padding: 20px;
+			  background-color: lighten($dark-color, 30%);
+			  color: white;
+			  cursor: pointer;
+
+			  &.active{
+					color: $button-color;
+					font-weight: bold;
+					background-color: $dark-color;
+			  }
+			}
+		}
 	}
 }
