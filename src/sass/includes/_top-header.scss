@@ -10,11 +10,16 @@
   	justify-content: space-between;
   	max-width: $container-width;
 		display: flex;
+		padding: 0 40px;
 		height: 80px;
     margin: 0 auto;
 
 		@media #{$desktop} {
-			max-width: 960px;
+			max-width: 1199.98px;
+		}
+
+		@media #{$tablet} {
+			max-width: 991.98px;
 		}
 
 		p {
@@ -28,17 +33,38 @@
 		}
 
 		.search-container {
-			margin-top: 20px;
+			margin: 16px 0;
+		  width: 350px;
+		  overflow: hidden;
+		  display: flex;
 
-		  .input-search {
-				padding: 10px;
-				border: none;
-		  }
+			form {
+				flex: 0 1 100%;
 
-		  .btn-search{
-		  	padding: 15px;
+			  .input-search {
+					padding: 13px;
+			    font-size: 1.154rem;
+			    border: none;
+			    box-shadow: 3px 4px 15px #4d4b4b;
+		  		width: 100%;
+			  }
+			}
+
+			.btn-search {
+		  	background-color: $dark-color;
+		  	border: none;
+		    cursor: pointer;
+		    flex: 1 0 50px;
+		    margin-left: 23px;
+
+		  	&:before {		  		
+		  		content: '\f1c3';
+		  		font-family: 'Material Desing Icons';
+    			font-size: 30px;
+    			color: $light-color;
+    			line-height: 47px;
+		  	}
 		  }
 		}
-  }
-	
+  }	
 }

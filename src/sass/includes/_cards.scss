@@ -1,6 +1,5 @@
 .cards {
 	flex: 0 1 65%;
-	border: solid 1px gray;
 	overflow-x: hidden;
   overflow-y: scroll;
 
@@ -42,20 +41,25 @@
 	    }
 		}
 
-		.card-favorita{
+		.card-favorite-star{
 			position: absolute;
 			right: 30px;
     	bottom: 20px;
-    	height: 30px;
-    	width: 30px;
-    	border: solid 1px $light-color;
-    	cursor: pointer;
 
-    	&.active {
-    		border: solid 1px $yellow;
-    		background-color: $yellow;
+  		&:before {
+    		content: '\f27c';
+    		font-family: 'Material Desing Icons';
+    		font-size: 30px;
+    		color: white;
+    		cursor: pointer;
+  		}	
+
+  		&.active {
+  			&:before {
+					content: '\f27d';
+					color: $yellow;
+  			}
     	}
 		}
-
 	}
 }

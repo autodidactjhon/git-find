@@ -2,42 +2,34 @@
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Cairo|Roboto" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
 	<!--Styles-->
 	<link rel="stylesheet" href="assets/css/git-find.css" type="text/css">
-
 </head>
-<body class="search">	
-		
+<body class="search">
 	<header class="top-header">
 		<div class="wrapper-header">
 			<p>Hola <span class="special" id="topUser"></span>!! Bienvenido a <span class="special">GITFIND</span></p>
 			<div class="search-container">
-				<input class="input-search" type="text" placeholder="Ingrese la palabra a buscar">
-				<button class="btn-search" id="search">Buscar</button>
-			</div>				
+				<form action="submit" id="formSearch">
+					<input class="input-search" type="text" value="" required placeholder="Ingrese la palabra a buscar"/>
+				</form>
+				<button class="btn-search" type="submit" form="formSearch" value=""/>
+			</div>
 		</div>
 	</header>
-
 	<div class="wrapper">
 		<div class="box">	
 			<section class="cards" id="cards">				
 			</section>
 			<section class="favoritos" id="favoritos">
-				
 			</section>
 		</div>
 	</div>
-
 	<!--JS-->
-	<script src="assets/js/search-app.js"></script>
+	<script src="assets/js/app.js"></script>
 	<script>
-			const search = new SearchApp();
-			search.init();
+		const search = new SearchApp();
+		search.init();
 	</script>
 </body>
 </html>

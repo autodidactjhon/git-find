@@ -2,6 +2,7 @@
 
 html {
 	font-size: 16px;
+	height: 100%;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
 	color: $text-color;
 	margin: 0;
 	position: relative;
+	height: 100%;
 
 	&.home {
 		background-color: $body-bg;

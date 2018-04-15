@@ -10,3 +10,17 @@
 	font-family: 'Proxima Nova';
 	src: url('../../assets/fonts/ProximaNova/ProximaSansRegular Regular.ttf');
 }
+
+/*!
+ *  Material Design Iconic Font by Sergey Kupletsky (@zavoloklom) - http://zavoloklom.github.io/material-design-iconic-font/
+ *  License - http://zavoloklom.github.io/material-design-iconic-font/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@font-face {
+	font-family: 'Material Desing Icons';
+	src: url('../../assets/fonts/Material_Design_Icons/Material-Design-Iconic-Font.woff2?v=2.2.0') format('woff2'), 
+			 url('../../assets/fonts/Material_Design_Icons/Material-Design-Iconic-Font.woff?v=2.2.0') format('woff'),
+			 url('../../assets/fonts/Material_Design_Icons/Material-Design-Iconic-Font.ttf?v=2.2.0') format('truetype');
+	font-weight: normal;
+  font-style: normal;
+}

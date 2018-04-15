@@ -2,24 +2,54 @@
 	flex: 0 1 50%;
 	align-self: center;
 	margin-top: -120px;
+	margin-right: 60px;
 
-	.title-login{
-		font-family: 'Futura', sans-serif;
-		display: block;
-    font-size: 80px;
-    text-align: right;
-    padding-right: 60px;
-    margin-bottom: 50px;
-	}
+	@media #{$phone} {
+  	margin-right: 0px;
+  }
 
-	.input-text{
-		display: block;
-		padding: 16px;
-		width: 80%;
-		font-size: 1.308rem;
-		border: none;
-		float: right;
-		margin-bottom: 40px;
+	form {
+		.title-login{
+			font-family: 'Futura', sans-serif;
+			display: block;
+	    font-size: 5rem;
+	    color: $light-color;
+	    text-align: right;
+	    padding-right: 60px;
+	    margin-bottom: 50px;
+	    text-shadow: 3px 4px 15px #4d4b4b;
+
+	    @media #{$tablet} {
+	    	text-align: center;
+	    	padding-right: 0;
+	    }
+
+	    @media #{$phone} {
+				font-size: 4rem;
+				margin-bottom: 20px;
+	    }
+
+	    @media #{$small-phone} {	    	
+	    	font-size: 3.462rem;
+	    }
+		}
+
+		.input-text{
+			display: block;
+			padding: 16px;
+			width: 90%;
+			font-size: 1.308rem;
+			border: none;
+			float: right;
+			margin-bottom: 40px;
+			box-shadow: 3px 4px 15px #4d4b4b;
+
+			@media #{$phone} {
+				width: 100%	;
+	    	margin-bottom: 30px;
+	    	box-sizing: border-box;
+	    }
+		}		
 	}
 
 	.btn{
@@ -27,10 +57,10 @@
 		float: right;
 		background-color: $dark-color;
 		border: none;
-    color: lightblue;
+    color: $button-color;
     padding: 17px 70px;
     font-size: 1.154rem;
     cursor: pointer;
+    margin-bottom: 30px;
 	}
-
 }

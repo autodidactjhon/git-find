@@ -2,10 +2,31 @@
 	flex: 0 1 50%;
 	align-self: center;
 
+	@media #{$phone} {
+		text-align: center;
+		margin-bottom: 100px;
+  }
+
+  @media #{$small-phone} {
+		text-align: center;
+		margin-bottom: 100px;
+		padding-top: 30px;
+  }
+
 	img {
 		height: auto;
     width: auto;
     max-height: 500px;
     max-width: 500px;
+
+    @media #{$tablet} {
+			max-height: 350px;
+    	max-width: 350px;
+    }
+
+    @media #{$small-phone} {
+			max-height: 250px;
+    	max-width: 250px;
+    }
   }
 }

@@ -4,23 +4,40 @@
 	margin: 0 auto;
 	max-width: $container-width;
 	display: flex;
-	height: 100vh;
+	padding: 0 40px;
+	height: 100%;
 
 	@media #{$desktop} {
-		max-width: 960px;
+		max-width: 1199.98px;
+	}
+
+	@media #{$tablet} {
+		max-width: 991.98px;
 	}
 
 	@media #{$phone} {
+		max-width: 767.98px;
+		display: block;
 		box-shadow: none;
 		background-color: $body-bg;
+		margin: 0 30px;
+	}
+
+	@media #{$small-phone} {
+		max-width: 100%;
+		padding: 0;
+	}
+
+	.search & {
+		height: calc(100% - 80px);
 	}
 
 	.box {
-		border: solid 1px gray;
-		padding: 20px;
+		margin: 20px 0;
 		width: 100%;
 		display: flex;
-		overflow: hideen;
-		scroller-y: scroller;
+		box-shadow: 3px 4px 15px #4d4b4b;
+		//overflow: hideen;
+		//scroller-y: scroller;
 	}
 }

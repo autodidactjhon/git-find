@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  height: 100%;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
   color: #444444;
   margin: 0;
   position: relative;
+  height: 100%;
 }
 
 body.home {
@@ -33,29 +35,48 @@ ul li {
   margin: 0 auto;
   max-width: 1020px;
   display: flex;
-  height: 100vh;
+  padding: 0 40px;
+  height: 100%;
 }
 
 @media (max-width: 1199.98px) {
   .wrapper {
-    max-width: 960px;
+    max-width: 1199.98px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wrapper {
+    max-width: 991.98px;
   }
 }
 
 @media (max-width: 767.98px) {
   .wrapper {
+    max-width: 767.98px;
+    display: block;
     box-shadow: none;
     background-color: #6ED3CF;
+    margin: 0 30px;
   }
 }
 
+@media (max-width: 575.98px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.search .wrapper {
+  height: calc(100% - 80px);
+}
+
 .wrapper .box {
-  border: solid 1px gray;
-  padding: 20px;
+  margin: 20px 0;
   width: 100%;
   display: flex;
-  overflow: hideen;
-  scroller-y: scroller;
+  box-shadow: 3px 4px 15px #4d4b4b;
 }
 
 .top-header {
@@ -69,13 +90,20 @@ ul li {
   justify-content: space-between;
   max-width: 1020px;
   display: flex;
+  padding: 0 40px;
   height: 80px;
   margin: 0 auto;
 }
 
 @media (max-width: 1199.98px) {
   .top-header .wrapper-header {
-    max-width: 960px;
+    max-width: 1199.98px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .top-header .wrapper-header {
+    max-width: 991.98px;
   }
 }
 
@@ -90,21 +118,58 @@ ul li {
 }
 
 .top-header .wrapper-header .search-container {
-  margin-top: 20px;
+  margin: 16px 0;
+  width: 350px;
+  overflow: hidden;
+  display: flex;
 }
 
-.top-header .wrapper-header .search-container .input-search {
-  padding: 10px;
+.top-header .wrapper-header .search-container form {
+  flex: 0 1 100%;
+}
+
+.top-header .wrapper-header .search-container form .input-search {
+  padding: 13px;
+  font-size: 1.154rem;
   border: none;
+  box-shadow: 3px 4px 15px #4d4b4b;
+  width: 100%;
 }
 
 .top-header .wrapper-header .search-container .btn-search {
-  padding: 15px;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  flex: 1 0 50px;
+  margin-left: 23px;
+}
+
+.top-header .wrapper-header .search-container .btn-search:before {
+  content: '\f1c3';
+  font-family: 'Material Desing Icons';
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 47px;
 }
 
 .img-git {
   flex: 0 1 50%;
   align-self: center;
+}
+
+@media (max-width: 767.98px) {
+  .img-git {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .img-git {
+    text-align: center;
+    margin-bottom: 100px;
+    padding-top: 30px;
+  }
 }
 
 .img-git img {
@@ -114,29 +179,81 @@ ul li {
   max-width: 500px;
 }
 
+@media (max-width: 991.98px) {
+  .img-git img {
+    max-height: 350px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .img-git img {
+    max-height: 250px;
+    max-width: 250px;
+  }
+}
+
 .login {
   flex: 0 1 50%;
   align-self: center;
   margin-top: -120px;
+  margin-right: 60px;
 }
 
-.login .title-login {
+@media (max-width: 767.98px) {
+  .login {
+    margin-right: 0px;
+  }
+}
+
+.login form .title-login {
   font-family: 'Futura', sans-serif;
   display: block;
-  font-size: 80px;
+  font-size: 5rem;
+  color: #ffffff;
   text-align: right;
   padding-right: 60px;
   margin-bottom: 50px;
+  text-shadow: 3px 4px 15px #4d4b4b;
 }
 
-.login .input-text {
+@media (max-width: 991.98px) {
+  .login form .title-login {
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .login form .title-login {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .login form .title-login {
+    font-size: 3.462rem;
+  }
+}
+
+.login form .input-text {
   display: block;
   padding: 16px;
-  width: 80%;
+  width: 90%;
   font-size: 1.308rem;
   border: none;
   float: right;
   margin-bottom: 40px;
+  box-shadow: 3px 4px 15px #4d4b4b;
+}
+
+@media (max-width: 767.98px) {
+  .login form .input-text {
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
 }
 
 .login .btn {
@@ -144,15 +261,15 @@ ul li {
   float: right;
   background-color: #000;
   border: none;
-  color: lightblue;
+  color: #03A6FF;
   padding: 17px 70px;
   font-size: 1.154rem;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .cards {
   flex: 0 1 65%;
-  border: solid 1px gray;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -196,27 +313,30 @@ ul li {
   color: #02A3F8;
 }
 
-.cards .card .card-favorita {
+.cards .card .card-favorite-star {
   position: absolute;
   right: 30px;
   bottom: 20px;
-  height: 30px;
-  width: 30px;
-  border: solid 1px #ffffff;
+}
+
+.cards .card .card-favorite-star:before {
+  content: '\f27c';
+  font-family: 'Material Desing Icons';
+  font-size: 30px;
+  color: white;
   cursor: pointer;
 }
 
-.cards .card .card-favorita.active {
-  border: solid 1px #E2D616;
-  background-color: #E2D616;
+.cards .card .card-favorite-star.active:before {
+  content: '\f27d';
+  color: #E2D616;
 }
 
 .favoritos {
   flex: 0 1 35%;
   padding: 20px;
+  border-left: solid 2px #eeeeee;
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 .favoritos .fav-card {
@@ -249,6 +369,17 @@ ul li {
 @font-face {
   font-family: 'Proxima Nova';
   src: url("../../assets/fonts/ProximaNova/ProximaSansRegular Regular.ttf");
+}
+
+/*!
+ *  Material Design Iconic Font by Sergey Kupletsky (@zavoloklom) - http://zavoloklom.github.io/material-design-iconic-font/
+ *  License - http://zavoloklom.github.io/material-design-iconic-font/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+  font-family: 'Material Desing Icons';
+  src: url("../../assets/fonts/Material_Design_Icons/Material-Design-Iconic-Font.woff2?v=2.2.0") format("woff2"), url("../../assets/fonts/Material_Design_Icons/Material-Design-Iconic-Font.woff?v=2.2.0") format("woff"), url("../../assets/fonts/Material_Design_Icons/Material-Design-Iconic-Font.ttf?v=2.2.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=git-find.css.map */
